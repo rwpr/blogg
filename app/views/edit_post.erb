@@ -1,0 +1,10 @@
+<h1>Edit Post</h1>
+
+<form action="/posts/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <p>Post author: <input type="text" name="post[post_name]" value="<%= @post.post_name %>"></p>
+  <p>Post content: <input type="text" name="post[post_desc]" value="<%= @post.post_desc %>"></p>
+<br>
+    <input type="submit" value="Submit">
+
+</form>

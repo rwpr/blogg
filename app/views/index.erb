@@ -1,0 +1,14 @@
+<h2>All Posts:</h2>
+
+  <% @posts.each do |post|%>
+    <a href="/posts/<%= post.id %>"><%= post.post_name%></a>
+    <% post.tags.each do |t|%> |
+      <a href="/tags/<%= t.id %>"><%= t.tag_name%></a>
+    <% end %><br>
+  <%end%>
+
+  <br>
+
+  <form action="/posts/new" method="get">
+    <input type="submit" value="Create posts">
+  </form>

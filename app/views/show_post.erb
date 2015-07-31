@@ -1,0 +1,14 @@
+<h1>Post Info</h1>
+
+<p>Post author: <%= @post.post_name%></p>
+<p>Post content: <%= @post.post_desc%></p>
+<p>Post tag: <%= @post_tag%></p>
+
+<form action="/posts/<%= @post.id %>/edit" method="get">
+  <input type="submit" value="Edit">
+</form>
+
+<form action="/posts/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
